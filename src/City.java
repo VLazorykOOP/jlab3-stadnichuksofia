@@ -1,18 +1,29 @@
-public class City extends Address {
-    String name;
-    int postcode;
+//public class City extends Place {
+//    String name;
+//    boolean isMega;
+//
+//    public City (String name, boolean isMega) {
+//        this.name = name;
+//    }
+//
+//    @Override
+//    public String toString() {
+//        String type = isMega ? "Mega" : "City";
+//        return type + ": " +
+//                super.toString() +  ", ";
+//    }
+//}
+class City extends Place {
+    String mayor;
 
-    public City (String street, String houseNumber, int apartmentNumber, int id, String name, int postcode) {
-        super(street, houseNumber, apartmentNumber, id);
-        this.name = name;
-        this.postcode = postcode;
+    public City(String name, int population, String mayor) {
+        super(name, population);
+        this.mayor = mayor;
     }
 
     @Override
-    public String toString() {
-        return "City: " +
-                "name: " + name +  ", " +
-                super.toString() +  ", " +
-                "postcode: " + postcode;
+    public void show() {
+        super.show();
+        System.out.println("Мер: " + mayor);
     }
 }

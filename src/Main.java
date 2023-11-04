@@ -26,57 +26,21 @@ public class Main {
         }
     }
     public static void Task1(){
-        Place p1 = new Place(
-                "Rivnens'ka",
-                "14 / block 8",
-                217,
-                1,
-                "МПУіК");
-        City c1 = new City(
-                "University",
-                "28",
-                19,
-                2,
-                "Chernivtsy",
-                58012);
-        Region r1 = new Region (
-                "Theatrical",
-                "2",
-                45,
-                7,
-                "Chernivtsy",
-                58002,
-                "Bukovyna");
-        Metropolis m1 = new Metropolis (
-                "Kotsybynskogo",
-                "2",
-                6,
-                9,
-                "Chernivtsy",
-                58002,
-                "Bukovyna",
-                "Ukraine",
-                43000000);
-        String placeInfo = p1.toString();
-        System.out.println(placeInfo);
-        String cityInfo = c1.toString();
-        System.out.println(cityInfo);
-        String regionInfo = r1.toString();
-        System.out.println(regionInfo);
-        String metropolisInfo = m1.toString();
-        System.out.println(metropolisInfo);
 
-        List<Address> addressList = new ArrayList<>();
-        addressList.add(p1);
-        addressList.add(c1);
-        addressList.add(r1);
-        addressList.add(m1);
-        System.out.println(addressList);
+        Place[] places = new Place[3];
+
+        places[0] = new Region("Львівська область", 2500000, "Іван Іванович");
+        places[1] = new City("Львів", 720000, "Петро Петрович");
+        places[2] = new Metropolis("Київ", 3000000, "Олександр Олександрович", "Фінансовий");
+
+        for (Place place : places) {
+            place.show();
+        }
     }
     public static void Task2() {
         Currency[] currencies = new Currency[]{
-                new Dollar(100),
-                new Euro(50)
+                new Dollar(150),
+                new Euro(25)
         };
 
         for (Currency currency : currencies) {
@@ -85,8 +49,8 @@ public class Main {
     }
     public static void Task3() {
         Currency[] currencies = new Currency[]{
-                new Dollar(100),
-                new Euro(50)
+                new Dollar(150),
+                new Euro(90)
         };
 
         for (Currency currency : currencies) {

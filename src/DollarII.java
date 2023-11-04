@@ -6,7 +6,7 @@ public class DollarII implements CurrencyII {
     }
     @Override
     public double convertToUAH() {
-        return amount * 38;
+        return amount * 39;
     }
     @Override
     public void display() {

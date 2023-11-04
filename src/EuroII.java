@@ -6,7 +6,6 @@ public class EuroII implements CurrencyII {
     }
     @Override
     public double convertToUAH() {
-        // Припустимо, що курс євро до гривні - 30
         return amount * 40;
     }
     @Override
