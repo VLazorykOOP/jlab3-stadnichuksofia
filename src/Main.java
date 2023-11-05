@@ -30,8 +30,8 @@ public class Main {
         Place[] places = new Place[3];
 
         places[0] = new Region("Львівська область", 2500000, "Іван Іванович");
-        places[1] = new City("Львів", 720000, "Петро Петрович");
-        places[2] = new Metropolis("Київ", 3000000, "Олександр Олександрович", "Фінансовий");
+        places[1] = new City("Львів", 720000, "Віктор Петрович");
+        places[2] = new Metropolis("Київ", 3000000, "Максим Олександрович", "Фінансовий");
 
         for (Place place : places) {
             place.show();
